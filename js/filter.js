@@ -29,7 +29,9 @@ function start() {
 }
 
 function showProducts(products) {
-  //console.log(products);
+  // breadcrumbs
+  document.querySelector("h1").textContent = category;
+  document.querySelector(".breadcrumbs_item_active").textContent = category;
 
   const productsTemplate = document.querySelector(".products_template").content;
 

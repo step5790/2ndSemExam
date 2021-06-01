@@ -1,6 +1,6 @@
-const urlParams = new URLSearchParams(window.location.search);
+const urlParamsId = new URLSearchParams(window.location.search);
 
-const productId = urlParams.get("product");
+const productId = urlParamsId.get("product");
 
 fetch("https://kea2sem-1270.restdb.io/rest/products/" + productId, {
   method: "GET",
@@ -17,8 +17,9 @@ fetch("https://kea2sem-1270.restdb.io/rest/products/" + productId, {
   });
 
 function showProduct(product) {
-  console.log(product);
-  //populate
+  document.querySelector(".breadcrumbs_link_1st").textContent =
+    product.category;
+  document.querySelector(".breadcrumbs_item_active").textContent = product.name;
   document.querySelector(".productTitle").textContent = product.name;
   document.querySelector(".description p").textContent =
     product.productDescription;

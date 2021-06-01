@@ -29,12 +29,9 @@ function start() {
 }
 
 function showProducts(products) {
-  //console.log(products);
-
   const productsTemplate = document.querySelector(".products_template").content;
 
-  products.forEach((product) => {
-    //console.log(product);
+  products.forEach((products) => {
     const productsClone = productsTemplate.cloneNode(true);
     //populate
     productsClone.querySelector(".products_title").textContent = product.name;
