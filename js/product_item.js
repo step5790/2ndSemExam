@@ -26,7 +26,8 @@ function showProduct(product) {
 
   document.querySelector(".material p span:last-of-type").textContent =
     product.productMaterials;
-  document.querySelector(".price h2 span").textContent = product.price;
+  document.querySelector(".shop-item-price h2 span").textContent =
+    product.price;
   document.querySelector(".product-image img").src = product.image;
   document.querySelector(".imgbox1 img").src = product.image;
   document.querySelector(".imgbox2 img").src = product.image;

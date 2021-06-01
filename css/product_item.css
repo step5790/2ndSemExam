@@ -102,21 +102,23 @@ h1 {
 }
 .btn {
   padding: 1rem 4rem;
-  background-color: #7bafd4;
-  border: 1px solid #175a8a;
+  background-color: #626d71;
+  border: 0px;
   font-size: 1.5rem;
   transition: 0.5s background-color;
+  color: white;
 }
 .btn:hover {
-  background-color: var(--dark-blue);
+  background-color: #aed5b2;
+  color: black;
 }
-.btn1 {
+/* .btn1 {
   padding: 1rem 4rem;
-  background-color: white;
-  border: 1px solid #175a8a;
+  background-color: #626D71;
+  border: 0px
   font-size: 1.5rem;
   transition: 0.5s background-color;
-}
+} */
 .btn1:hover {
   background-color: #d8e8f3;
 }
@@ -127,7 +129,8 @@ a {
   text-decoration: none;
 }
 .price {
-  margin-top: 1rem;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
 }
 .product-info {
   margin-top: 1rem;
@@ -209,6 +212,7 @@ li {
   .btn {
     margin: 0;
     width: fit-content;
+    margin-left: 35px;
   }
   .product-small-img {
     display: none;
