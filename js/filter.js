@@ -1,9 +1,9 @@
 window.addEventListener("load", start);
-const urlParams = new URLSearchParams(window.location.search);
-const category = urlParams.get("category");
+const urlFilterParams = new URLSearchParams(window.location.search);
+const categoryFilter = urlFilterParams.get("productColor");
 
-let url = `https://kea2sem-1270.restdb.io/rest/products?fetchchildren=true&q={"category":"${category}"}`;
-const options = {
+let urlFilter = `https://kea2sem-1270.restdb.io/rest/products?fetchchildren=true&q={"productColor":"${categoryFilter}"}`;
+const optionsFilter = {
   method: "GET",
   headers: {
     "x-apikey": "602f53d35ad3610fb5bb638d",
@@ -12,7 +12,7 @@ const options = {
 };
 
 function start() {
-  fetch(url, {
+  fetch(urlFilter, {
     method: "GET",
     headers: {
       "x-apikey": "602f53d35ad3610fb5bb638d",
