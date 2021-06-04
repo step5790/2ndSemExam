@@ -1,3 +1,13 @@
+document
+  .querySelector("button.btn.btn-primary.shop-item-button")
+  .addEventListener("click", notifyCart);
+
+function notifyCart() {
+  alert("Item added to Cart.");
+  document.querySelector(".shopping_cart_fill").style.display = "block";
+  document.querySelector("a.shopping_cart").style.display = "none";
+}
+
 if (document.readyState == "loading") {
   document.addEventListener("DOMContentLoaded", ready);
 } else {
@@ -36,7 +46,6 @@ function purchaseClicked() {
   }
   updateCartTotal();
 }
-
 function removeCartItem(event) {
   var buttonClicked = event.target;
   buttonClicked.parentElement.parentElement.remove();
@@ -60,6 +69,13 @@ function addToCartClicked(event) {
 
   addItemToCart(title, price, imageSrc);
   updateCartTotal();
+
+  document.querySelector(".btn-danger").addEventListener("click", updateCart);
+
+  function updateCart() {
+    document.querySelector(".shopping_cart_fill").style.display = "none";
+    document.querySelector("a.shopping_cart").style.display = "block";
+  }
 }
 
 function addItemToCart(title, price, imageSrc) {
@@ -113,3 +129,5 @@ function updateCartTotal() {
   document.getElementsByClassName("cart-total-price")[0].innerText =
     "$" + total;
 }
+
+// update cart

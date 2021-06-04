@@ -1,5 +1,5 @@
 const urlParamsId = new URLSearchParams(window.location.search);
-
+let cartCount = 0;
 const productId = urlParamsId.get("product");
 
 fetch("https://kea2sem-1270.restdb.io/rest/products/" + productId, {
@@ -31,4 +31,36 @@ function showProduct(product) {
   document.querySelector(".product-image img").src = product.image;
   document.querySelector(".imgbox1 img").src = product.image;
   document.querySelector(".imgbox2 img").src = product.image;
+}
+
+document
+  .querySelector("button.btn.btn-primary.shop-item-button")
+  .addEventListener("click", cartTrigger);
+
+function cartTrigger() {
+  cartCount = 1;
+}
+
+document.querySelector(".shopping_cart").addEventListener("click", runCart);
+document
+  .querySelector(".shopping_cart_fill")
+  .addEventListener("click", runCart);
+
+function runCart() {
+  if (cartCount == 1) {
+    document.querySelector(".container.cart").classList.add("show");
+    document.querySelector("section.product.mrgn").classList.add("blur");
+  } else {
+    alert("Cart Empty");
+  }
+}
+
+document
+  .querySelector("section.product.mrgn")
+  .addEventListener("click", closeCart);
+
+function closeCart() {
+  // alert("Thank you for your purchase");
+  document.querySelector(".container.cart").classList.remove("show");
+  document.querySelector("section.product.mrgn").classList.remove("blur");
 }

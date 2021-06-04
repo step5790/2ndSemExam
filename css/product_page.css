@@ -236,17 +236,20 @@ p span:first-of-type {
   top: -14vw;
 }
 
-@media only screen and (max-width: 850px) {
-  .product {
-    padding-top: 35px;
-  }
-}
+/* cart */
 
 .container {
   max-width: 900px;
   margin: 0 auto;
   padding: 0 1.5em;
+  position: absolute;
+  width: 100%;
+  background: #fdedc5;
+  top: 32vh;
+  left: 25vw;
+  visibility: hidden;
 }
+
 * {
   box-sizing: border-box;
   font-family: Work Sans;
@@ -365,4 +368,23 @@ p span:first-of-type {
   display: block;
   margin: 40px auto 80px auto;
   font-size: 1.75em;
+}
+
+/* effects */
+
+.blur {
+  /* pointer-events: none; */
+  -webkit-filter: blur(15px);
+}
+
+.show {
+  visibility: visible;
+}
+
+/* media */
+
+@media only screen and (max-width: 850px) {
+  .product {
+    padding-top: 35px;
+  }
 }

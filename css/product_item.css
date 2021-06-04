@@ -112,13 +112,11 @@ h1 {
   background-color: #aed5b2;
   color: black;
 }
-/* .btn1 {
-  padding: 1rem 4rem;
-  background-color: #626D71;
-  border: 0px
-  font-size: 1.5rem;
-  transition: 0.5s background-color;
-} */
+
+.shopping_cart_fill {
+  display: none;
+}
+
 .btn1:hover {
   background-color: #d8e8f3;
 }
