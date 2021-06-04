@@ -375,6 +375,7 @@ p span:first-of-type {
 .blur {
   /* pointer-events: none; */
   -webkit-filter: blur(15px);
+  pointer-events: none;
 }
 
 .show {

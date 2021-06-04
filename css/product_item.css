@@ -100,18 +100,6 @@ h1 {
   display: inline-block;
   opacity: 0.6;
 }
-.btn {
-  padding: 1rem 4rem;
-  background-color: #626d71;
-  border: 0px;
-  font-size: 1.5rem;
-  transition: 0.5s background-color;
-  color: white;
-}
-.btn:hover {
-  background-color: #aed5b2;
-  color: black;
-}
 
 .shopping_cart_fill {
   display: none;
@@ -226,6 +214,17 @@ li {
     margin: 0;
     padding: 0;
   }
+}
+
+.subContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+img.cart_close {
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
 }
 
 /* preloader styling */

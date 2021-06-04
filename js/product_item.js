@@ -55,9 +55,7 @@ function runCart() {
   }
 }
 
-document
-  .querySelector("section.product.mrgn")
-  .addEventListener("click", closeCart);
+document.querySelector(".cart_close").addEventListener("click", closeCart);
 
 function closeCart() {
   // alert("Thank you for your purchase");

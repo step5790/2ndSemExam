@@ -1,3 +1,5 @@
+var totalNext;
+
 document
   .querySelector("button.btn.btn-primary.shop-item-button")
   .addEventListener("click", notifyCart);
@@ -38,10 +40,14 @@ function ready() {
     .addEventListener("click", purchaseClicked);
 }
 
+// purchased click
+
 function purchaseClicked() {
   alert("Thank you for your purchase");
   var cartItems = document.getElementsByClassName("cart-items")[0];
   while (cartItems.hasChildNodes()) {
+    totalNext =
+      document.getElementsByClassName("cart-total-price")[0].innerText;
     cartItems.removeChild(cartItems.firstChild);
   }
   updateCartTotal();
@@ -120,14 +126,19 @@ function updateCartTotal() {
     var quantityElement = cartRow.getElementsByClassName(
       "cart-quantity-input"
     )[0];
-    var price = parseFloat(priceElement.innerText.replace("$", ""));
+    var price = parseFloat(priceElement.innerHTML);
     var quantity = quantityElement.value;
     total = total + price * quantity;
   }
+
   total = Math.round(total * 100) / 100;
 
   document.getElementsByClassName("cart-total-price")[0].innerText =
-    "$" + total;
-}
+    "DKK" + " " + total;
 
-// update cart
+  // Store Locally
+  var totalStorage = totalNext;
+
+  localStorage.setItem("totalStorage", totalStorage);
+  console.log(totalStorage);
+}

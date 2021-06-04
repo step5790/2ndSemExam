@@ -457,6 +457,19 @@ a.footer_menu_link:hover {
   }
 }
 
+.btn {
+  padding: 1rem 4rem;
+  background-color: #626d71;
+  border: 0px;
+  font-size: 1.5rem;
+  transition: 0.5s background-color;
+  color: white;
+}
+.btn:hover {
+  background-color: #aed5b2;
+  color: black;
+}
+
 /* devices smaller 560px */
 @media only screen and (max-width: 560px) {
   footer.main_footer {
