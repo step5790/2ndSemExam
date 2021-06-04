@@ -121,3 +121,16 @@ th {
 tr.total {
   background: #eed9c0;
 }
+
+/* thank you page  */
+main.thankyou {
+  margin-left: 20%;
+  margin-right: 20%;
+  padding-top: 200px;
+  text-align: center;
+}
+
+button.btn.btn-primary.btn-shop-more {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
