@@ -198,13 +198,14 @@ header img {
 footer.main_footer {
   font-size: 1rem;
   color: var(--font-color);
-  background-color: #ccddcc;
+  background-color: #fcfdfe;
   display: grid;
   grid-template-columns: 0.9fr 0.9fr 0.9fr 1.7fr;
   grid-template-rows: 0.8fr;
   padding-top: 0.5rem;
   padding: 0;
   margin-top: 4rem;
+  border-top: solid;
 }
 
 .about {

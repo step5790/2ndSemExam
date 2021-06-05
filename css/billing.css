@@ -53,12 +53,15 @@
 .form > form input:invalid {
   border: 2px solid red;
 }
+
 .form > form input:valid {
   border: 2px solid #0093be;
 }
+
 .form > form input:placeholder-shown {
   border: 2px solid #999999;
 }
+
 .form > form input:focus {
   border: 2px solid #808080;
 }
@@ -130,7 +133,51 @@ main.thankyou {
   text-align: center;
 }
 
+main.about_us {
+  background-image: url("http://meetstephen.dk/KEA/2nd_semester/2ndSemExam/assets/background.png");
+  background-size: cover;
+  background-position: initial;
+  padding-top: 200px;
+}
+
 button.btn.btn-primary.btn-shop-more {
   margin-top: 50px;
   margin-bottom: 50px;
+}
+
+.about_us img {
+  width: 500px;
+  box-shadow: 10px 5px 5px black;
+}
+
+.about_us .section_one,
+.about_us .section_two {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  padding-bottom: 200px;
+}
+
+.about_us .content {
+  width: 50%;
+}
+
+.section_one > div {
+  margin-left: 64px;
+  margin-right: 64px;
+}
+
+.section_two > div {
+  margin-left: 64px;
+  margin-right: 64px;
+}
+
+.about_us p {
+  font-size: 20px;
+}
+
+.about_us h1 {
+  font-size: 50px;
 }
