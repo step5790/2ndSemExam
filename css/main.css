@@ -156,6 +156,10 @@ header img {
     display: none;
   }
 
+  img.logo_image {
+    display: none;
+  }
+
   #hamburger_menu {
     display: block;
   }
