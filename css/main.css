@@ -43,7 +43,7 @@ header a {
 }
 
 span.regular_price {
-  color: red;
+  color: black;
   font-weight: bold;
   -webkit-text-stroke-width: medium;
 }
@@ -96,11 +96,12 @@ header img {
 .menu_dropdown ul {
   position: absolute;
   font-size: 0.9rem;
-  background-color: #ccddcc;
+  background-color: #fcfdfe;
   width: 180px;
   padding: 0;
   margin-left: -1.2rem;
 }
+
 
 .menu_dropdown li {
   margin: 1.2rem;
